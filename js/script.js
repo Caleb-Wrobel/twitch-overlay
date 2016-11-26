@@ -9,7 +9,7 @@ $(document).ready(function () {
 	// populate streamer names to couch if available
 	if (streamers) {
 		streamers = streamers.split(',');
-		$('.streamer-header').text("Streamers:");
+		$('.streamer-header').text("Streamers");
 		streamers.forEach(function(streamer) {
 			$('.streamers').append(streamer + " ");
 		})
@@ -37,6 +37,6 @@ $(document).ready(function () {
 	}
 
 	// display randomized quotes in ticker area
-	$('.ticker').append('<marquee scrollamount="7" class="ticker-text">' + randomize(testQuotes).join(" ... ") + '</marquee>');
+	$('.ticker').append('<marquee scrollamount="6" class="ticker-text">' + randomize(testQuotes).join(" ... ") + '</marquee>');
 
 });
