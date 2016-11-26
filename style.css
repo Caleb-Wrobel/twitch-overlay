@@ -11,27 +11,63 @@ body {
 	position: relative;
 }
 
-.chat {
-	height: 368px;
-	width: 255px;
-	background-color: #EEEEEE;
-	color: #424242;
-	margin: 204px 21px 0 0;
+.right-panel {
 	float: right;
-	line-height: 4px;
+	margin: 204px 20px 0 0;
+}
+
+.chat {
+	position: relative;
+	height: 369px;
+	width: 256px;
+	background-color: #333333;
+}
+
+iframe {
+	border: none;
+	height: 380px;
+	width: 268px;
+	margin: -6px;
+}
+
+.couch {
+	position: relative;
+	height: 135px;
+	width: 255px;
+	color: #FFFFFF;
+	font-weight: 700;
+	text-shadow: 2px 2px 1px black;
+	text-align: center;
+	display: table;
+	margin-top: 5px;
+}
+
+.streamer-header {
+	font-size: 18px;
+	height: 24px;
+	display: table-row;
+}
+
+.streamers {
+	font-size: 24px;
+	line-height: 24px;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	padding: 0 10px 0 10px;
 }
 
 .ticker {
+	position: absolute;
 	height: 48px;
 	width: 1008px;
-	position: absolute;
 	bottom: 8px;
 	left: 0;
 	margin-left: -8px;
 }
 
 .ticker-text {
-	font-size: 20px;
+	font-size: 18px;
 	color: #424242;
 	display: table-cell;
 	vertical-align: middle;

@@ -1,4 +1,19 @@
 $(document).ready(function () {
+	// get URL query params if available
+	// VALID PARAMS (so far): streamers
+
+	var url = new URL(location);
+	var params = new URLSearchParams(url.search);
+	var streamers = params.get('streamers');
+
+	// populate streamer names to couch if available
+	if (streamers) {
+		streamers = streamers.split(',');
+		$('.streamer-header').text("Streamers:");
+		streamers.forEach(function(streamer) {
+			$('.streamers').append(streamer + " ");
+		})
+	}
 
 	// test quotes from Fantastic Beasts and Where to Find Them
 	var testQuotes = [
@@ -22,6 +37,6 @@ $(document).ready(function () {
 	}
 
 	// display randomized quotes in ticker area
-	$('.ticker').append('<marquee scrollamount="8" class="ticker-text">' + randomize(testQuotes).join(" ... ") + '</marquee>');
+	$('.ticker').append('<marquee scrollamount="7" class="ticker-text">' + randomize(testQuotes).join(" ... ") + '</marquee>');
 
 });
