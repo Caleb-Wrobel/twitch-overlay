@@ -12,12 +12,12 @@ body {
 }
 
 .chat {
-	height: 349px;
-	width: 236px;
+	height: 368px;
+	width: 255px;
 	background-color: #EEEEEE;
-	margin: 204px 20px 0 0;
+	margin: 204px 21px 0 0;
 	float: right;
-	padding: 10px;
+	line-height: 4px;
 }
 
 .ticker {
