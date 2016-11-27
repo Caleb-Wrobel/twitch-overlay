@@ -37,8 +37,12 @@ $(document).ready(function () {
 	}
 
 	// display randomized quotes in ticker area
-	$('.ticker').append('<marquee scrollamount="6" class="ticker-text">' + randomize(testQuotes).join(" ... ") + '</marquee>');
+	$('.marquee').append(randomize(testQuotes).join(" ... "));
 
 	// initialize marquee enhancement jQuery plugin
-	$('marquee').marquee(optionalClass);
+	$('.marquee').marquee({
+		duration: 15000,
+		gap: 75,
+		duplicated: true
+	});
 });
