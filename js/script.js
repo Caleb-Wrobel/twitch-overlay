@@ -39,4 +39,6 @@ $(document).ready(function () {
 	// display randomized quotes in ticker area
 	$('.ticker').append('<marquee scrollamount="6" class="ticker-text">' + randomize(testQuotes).join(" ... ") + '</marquee>');
 
+	// initialize marquee enhancement jQuery plugin
+	$('marquee').marquee(optionalClass);
 });
