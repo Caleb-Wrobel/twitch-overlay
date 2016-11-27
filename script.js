@@ -2,8 +2,9 @@ $(document).ready(function () {
 	// get URL query params if available
 	// VALID PARAMS (so far): streamers
 
-	var url = new URL(location);
+	/*var url = new URL(location);
 	var params = new URLSearchParams(url.search);
+
 	var streamers = params.get('streamers');
 
 	// populate streamer names to couch if available
@@ -13,7 +14,16 @@ $(document).ready(function () {
 		streamers.forEach(function(streamer) {
 			$('.streamers').append(streamer + " ");
 		})
-	}
+	}*/
+
+	// populate couch names from external JSON
+	$.getJSON('https://samanthamed.github.io/twitch-overlay/couch-names.json', function(data) {
+		var streamers = data.streamers;
+		$('.streamer-header').text("Streamers");
+		streamers.forEach(function(streamer) {
+			$('.streamers').append(streamer + " ");
+		})
+	})
 
 	// test quotes from Fantastic Beasts and Where to Find Them
 	var testQuotes = [
@@ -41,7 +51,7 @@ $(document).ready(function () {
 
 	// initialize marquee enhancement jQuery plugin
 	$('.marquee').marquee({
-		duration: 15000,
+		duration: 17500,
 		gap: 75,
 		duplicated: true
 	});
